@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+
+
+int searchInsert(std::vector<int>& nums, int target) {
+    
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] >= target){
+            return i;
+        }
+    }
+    
+    return nums.size();
+}
+
+int main() {
+    return 0;
+}
