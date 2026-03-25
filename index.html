@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="github-base" content="https://github.com/SemirBaldzhiev/leetcode">
+  <meta name="github-branch" content="main">
+  <link id="hl-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+  <link id="hl-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" disabled>
+  <title>LeetCode Solutions</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>LeetCode Solutions</h1>
+    <p class="subtitle">Explore my solutions of the tasks.</p>
+    <div class="controls">
+      <input id="search" placeholder="Search tasks (name, folder, lang)..." />
+      <select id="perPage" title="Results per page">
+        <option value="8">8 / page</option>
+        <option value="12" selected>12 / page</option>
+        <option value="20">20 / page</option>
+      </select>
+    </div>
+
+    <div class="top-right">
+      <input type="checkbox" id="themeToggle" class="theme-toggle-input" aria-label="Toggle theme">
+      <label for="themeToggle" class="theme-toggle">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 13h3v-2H1v2zm10 9h2v-3h-2v3zm7.03-3.03l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM17 13h6v-2h-6v2zM6.76 19.16l-1.79 1.79 1.79 1.79 1.79-1.79-1.79-1.79zM12 7a5 5 0 100 10 5 5 0 000-10zM4.24 6.34L2.45 4.55 1 6l1.79 1.79 1.45-1.45z"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a9.9 9.9 0 00-7.07 2.93A9.9 9.9 0 002 12c0 5.52 4.48 10 10 10 4.42 0 8.17-2.99 9.42-7-1.76.9-3.76 1.07-5.67.45C13.41 14.2 9.8 10.6 9.05 5.25 8.64 3.13 10.12 2 12 2z"/></svg>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section id="grid" class="grid"></section>
+    <nav id="pagination" class="pagination"></nav>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year"></span> Semir Baldzhiev. All rights reserved.
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <div id="preview-modal" class="preview-modal" aria-hidden="true">
+    <div class="preview-backdrop"></div>
+    <div class="preview-panel">
+      <div class="preview-header">
+        <strong id="preview-title">Preview</strong>
+        <div>
+          <button id="copyBtn">Copy</button>
+          <button id="closePreview">Close</button>
+        </div>
+      </div>
+      <pre><code id="preview-code" class="hljs"></code></pre>
+    </div>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</body>
+</html>
